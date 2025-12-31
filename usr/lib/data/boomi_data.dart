@@ -126,5 +126,20 @@ class BoomiData {
         'Add a Mail connector (optional) to send an alert.'
       ],
     ),
+    Scenario(
+      title: 'Scenario 4: Database Extraction',
+      difficulty: 'Intermediate',
+      description: 'Query a SQL database to fetch active customer records and export them as a CSV file.',
+      goal: 'Learn Database Connectors, SQL Queries, and Profiles.',
+      steps: [
+        'Create a Database Profile and use the Import Wizard to connect to your DB.',
+        'Select the "Customers" table and generate the profile fields.',
+        'In the Process, add a Database Connector with Action "Get".',
+        'Configure the Operation: Create a new Profile, and write the SQL: "SELECT * FROM Customers WHERE Status = \'Active\'".',
+        'Add a Map Shape: Source is the DB Profile, Target is a Flat File (CSV) Profile.',
+        'Connect to a Disk Connector to save the output file.',
+        'Run in Test Mode to verify the SQL query execution.'
+      ],
+    ),
   ];
 }
